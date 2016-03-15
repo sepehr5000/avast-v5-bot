@@ -204,7 +204,7 @@ local function show_group_settingsmod(msg, data, target)
     	leave_ban = data[tostring(msg.to.id)]['settings']['leave_ban']
    	end
   local settings = data[tostring(target)]['settings']
-  local text = "Group settings:\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group member : "..settings.lock_member.."\nLock group leave : "..leave_ban.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection--"\nPublic: "..public
+  local text = "⚙Group settings:\nL🔱ock group name : "..settings.lock_name.."\n🔱Lock group photo : "..settings.lock_photo.."\n🔱Lock group member : "..settings.lock_member.."\n🔱Lock group leave : "..leave_ban.."\n🔱flood sensitivity : "..NUM_MSG_MAX.."\n🔱Bot protection : "..bots_protection--"\n (◉_◉)Public: "..public
   return text
 end
 
@@ -236,7 +236,7 @@ local function lock_group_arabic(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_arabic'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'Arabic has been locked'
+    return 'Arabic has been locked🔒'
   end
 end
 
@@ -250,7 +250,7 @@ local function unlock_group_arabic(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_arabic'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Arabic has been unlocked'
+    return 'Arabic has been unlocked🔓'
   end
 end
 
@@ -264,7 +264,7 @@ local function lock_group_bots(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_bots'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'Bots protection has been enabled'
+    return 'Bots protection has been enabled🔒'
   end
 end
 
@@ -278,7 +278,7 @@ local function unlock_group_bots(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_bots'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Bots protection has been disabled'
+    return 'Bots protection has been disabled🔓'
   end
 end
 
@@ -294,7 +294,7 @@ local function lock_group_namemod(msg, data, target)
     data[tostring(target)]['settings']['lock_name'] = 'yes'
     save_data(_config.moderation.data, data)
     rename_chat('chat#id'..target, group_name_set, ok_cb, false)
-    return 'Group name has been locked'
+    return 'Group name has been locked🔒'
   end
 end
 local function unlock_group_namemod(msg, data, target)
@@ -308,7 +308,7 @@ local function unlock_group_namemod(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_name'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Group name has been unlocked'
+    return 'Group name has been unlocked🔓'
   end
 end
 local function lock_group_floodmod(msg, data, target)
@@ -321,7 +321,7 @@ local function lock_group_floodmod(msg, data, target)
   else
     data[tostring(target)]['settings']['flood'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'Group flood has been locked'
+    return 'Group flood has been locked🔒'
   end
 end
 
@@ -335,7 +335,7 @@ local function unlock_group_floodmod(msg, data, target)
   else
     data[tostring(target)]['settings']['flood'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Group flood has been unlocked'
+    return 'Group flood has been unlocked🔓'
   end
 end
 
@@ -350,7 +350,7 @@ local function lock_group_membermod(msg, data, target)
     data[tostring(target)]['settings']['lock_member'] = 'yes'
     save_data(_config.moderation.data, data)
   end
-  return 'Group members has been locked'
+  return 'Group members has been locked🔒'
 end
 
 local function unlock_group_membermod(msg, data, target)
@@ -363,7 +363,7 @@ local function unlock_group_membermod(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_member'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Group members has been unlocked'
+    return 'Group members has been unlocked🔓'
   end
 end
 
@@ -402,12 +402,12 @@ local function lock_group_leave(msg, data, target)
   end
   local leave_ban = data[tostring(msg.to.id)]['settings']['leave_ban']
   if leave_ban == 'yes' then
-    return 'Leaving users will be banned'
+    return 'Leaving users will be banned🔒'
   else
     data[tostring(msg.to.id)]['settings']['leave_ban'] = 'yes'
     save_data(_config.moderation.data, data)
   end
-  return 'Leaving users will be banned'
+  return 'Leaving users will be banned🔒'
 end
 
 local function unlock_group_leave(msg, data, target)
@@ -416,11 +416,11 @@ local function unlock_group_leave(msg, data, target)
   end
   local leave_ban = data[tostring(msg.to.id)]['settings']['leave_ban']
   if leave_ban == 'no' then
-    return 'Leaving users will not be banned'
+    return 'Leaving users will not be banned🔓'
   else
     data[tostring(msg.to.id)]['settings']['leave_ban'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Leaving users will not be banned'
+    return 'Leaving users will not be banned🔓'
   end
 end
 
@@ -434,7 +434,7 @@ local function unlock_group_photomod(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_photo'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Group photo has been unlocked'
+    return 'Group photo has been unlocked🔓'
   end
 end
 
