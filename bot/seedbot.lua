@@ -225,7 +225,10 @@ function create_config( )
     "all",
     "leave_ban",
     "admin",
-    "mame"
+    "aboutme",
+    "anti_link",
+    "auto_leave",
+    "danestaniha",
     },
     sudo_users = {164985762},--Sudo users
     disabled_channels = {},
