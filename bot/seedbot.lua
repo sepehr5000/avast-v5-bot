@@ -230,7 +230,7 @@ function create_config( )
     "auto_leave",
     "danestaniha",
     },
-    sudo_users = {164985762},--Sudo users
+    sudo_users = {64101884,90284961},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[avast v5 - 
